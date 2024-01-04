@@ -30,7 +30,7 @@
                 -30vmax,-30vmax,
                 50vmax 50vmax;
             background-repeat: no-repeat;
-            animation: 7s movement linear infinite;
+            animation: 8s movement linear infinite;
         }
       
         @keyframes movement {
@@ -64,7 +64,7 @@
             }
             50%{
                 background-size: 
-                110vmax 100vmax,
+                100vmax 90vmax,
                 80vmax 70vmax,
                 90vmax 90vmax,
                 90vmax 90vmax,
@@ -78,13 +78,13 @@
             }
             75%{
                 background-size: 
-                100vmax 90vmax,
-                70vmax 60vmax,
+                80vmax 100vmax,
+                50vmax 60vmax,
                 80vmax 75vmax,
                 60vmax 80vmax,
                 80vmax 70vmax;
             background-position: 
-                -40vmax -70vmax,
+                -30vmax -60vmax,
                 70vmax 70vmax,
                 20vmax 0vmax,
                 -40vmax,-30vmax,
@@ -106,7 +106,7 @@
             background-color: #2980b9;
         }
         .button-container {
-            text-align: center; /* 讓容器內的內容置中 */
+            text-align: center;
         }
     </style>
     <script>
@@ -121,13 +121,17 @@
             '看到任何事物都會想與你分享',
             '不知道你有沒有同樣感覺',
             '不過呢 我很開心的',
-            '你不是想知道我不為人知的祕密嗎',
-            '我喜歡你',
-            '那這樣的交換有等價嗎',
-            '已經很不為人知了',
-            '但希望你不會排斥對我反感',
-            '這網站你想要什麼功能你就和我講',
-            '這是你的網站我慢慢設計讓這個網站變得更好',
+            '希望最近能讓你發生一些好事使你的心情更美麗',
+            '還有其他不為人知的祕密',
+            '不過你想知道嗎',
+            '當然我不會現在馬上告訴你~',
+            '請你做些等價交換吧!',
+            '除非你解鎖一些隱藏成就',
+            '所以請你慢慢探索吧!',
+            '不過呢 這個網站會持續更新(不定時)',
+            '如果你想要什麼內容也可以說',
+            '這算是給你的小驚喜嗎 屬於妳的網站',
+            '2024請多指教',
             
         ];
 
@@ -142,14 +146,17 @@
                 alert('已經結束囉!');
             }
         }
+   
+    
     </script>
 </head>
 <body>
 
-    <h1 style="color: antiquewhite;font-size: 45px; text-align: center;">要一直點擊確認才有下一段內容喔!</h1>
+    <h1 style="color: antiquewhite;font-size: 45px; text-align: center;">要一直點擊確認(好)才有下一段內容</h1>
     <div class="button-container">
-        <button onclick="showMessage()" style="">按我!</button>
+        <button onclick="showMessage()">按我!</button>
     </div>
+
 
 </body>
 </html>
