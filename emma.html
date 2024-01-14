@@ -108,6 +108,20 @@
         .button-container {
             text-align: center;
         }
+        #clock {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 400px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        font: bold;
+        color: #3307f5;
+        }
+        
     </style>
     <script>
         let count = 0;
@@ -146,8 +160,30 @@
                 alert('已經結束囉!');
             }
         }
-   
     
+
+    function showTime(clock) {
+        var now = new Date();
+        var year = now.getFullYear();
+        var month = now.getMonth() + 1;
+        var currentDay = now.getDate();
+        var hour = now.getHours();
+        var min = now.getMinutes();
+        var sec = now.getSeconds();
+        var work = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六");
+        var week = work[now.getDay()];
+        var time = year + "年 " + month + "月 " + currentDay + "日 " + week + " " + hour + ":" + min + ":" + sec;
+        clock.innerHTML = "目前時間是: " + time;
+    }
+    window.onload = function () {
+        var clock = document.getElementById("clock");
+        window.setInterval(function () {
+            showTime(clock);
+        }, 1000);
+}
+
+    
+
     </script>
 </head>
 <body>
@@ -156,8 +192,11 @@
     <div class="button-container">
         <button onclick="showMessage()">按我!</button>
     </div>
-
-
+    <a href="https://line.me/ti/p/2rESx4eywH">
+        <h3>當你心情不好時或想我時就按我</h3>
+    </a>
+    <div id="clock"></div>
+    
 </body>
 </html>
 
